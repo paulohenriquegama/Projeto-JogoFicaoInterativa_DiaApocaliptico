@@ -1,10 +1,10 @@
 {
-    "name": "heroku-repo",
+    "name": "projeto-heroku",
     "description": "Heroku CLI plugin to manipulate the repo",
     "version": "1.0.14",
-    "author": "Jeff Dickey (@dickeyxxx)",
+    "author": "eliasssantana",
     "bugs": {
-      "url": "https://github.com/heroku/heroku-repo/issues"
+      "url": "https://github.com/eliasssantana/Projeto-JogoFicaoInterativa_DiaApocaliptico"
     },
     "dependencies": {
       "@heroku-cli/plugin-run": "3.8.10",
@@ -17,23 +17,19 @@
     "devDependencies": {
       "standard": "^11.0.1"
     },
-    "homepage": "https://github.com/heroku/heroku-repo",
+    "homepage": "https://github.com/eliasssantana/Projeto-JogoFicaoInterativa_DiaApocaliptico",
     "keywords": [
-      "heroku-plugin"
+      "heroku-project"
     ],
     "files": [
-      "/index.js",
+      "/main.py",
       "/commands",
       "/lib"
     ],
     "license": "ISC",
-    "main": "index.js",
+    "main": "main.py",
     "repository": {
       "type": "git",
-      "url": "https://github.com/heroku/heroku-repo.git"
-    },
-    "scripts": {
-      "preversion": "npm test",
-      "test": "standard"
+      "url": "https://github.com/eliasssantana/Projeto-JogoFicaoInterativa_DiaApocaliptico/projeto.git"
     }
   }
