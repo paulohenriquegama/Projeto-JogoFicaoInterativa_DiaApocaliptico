@@ -69,7 +69,7 @@ class Texto:
 
     @texto.setter
     def texto(self, novo_texto):
-        raise ValueError("Impossível escrever texto diretamente, tente u outro método.")
+        raise ValueError("Impossível escrever texto diretamente, tente um outro método.")
 
     def escreverTexto(self, texto, estilo='vermelho', velocidade=0.02):
         self.__texto = texto
@@ -153,7 +153,7 @@ Após 3 dias de muitas batalhas o exército conseguiu eliminar o os zumbis e aqu
             relogio.avancaTempo(72)
             print(relogio)
             print()
-            frase = f' Parabens você conseguiu vencer o Dia Apocalíptico'
+            frase = f' Parabéns!! você conseguiu vencer o Dia Apocalíptico'
             texto.escreverTexto (frase,'verde')
         else:
             Morto.textoFim(self)
@@ -257,7 +257,7 @@ O que você irá fazer?
 
 1 - Vai até a porta para vê o que está acontecendo.
 2 - Liga a TV para ver os noticiários.
-3 - Fica com tanto medo e procura um lugar para se esconder.
+3 - Fica apavorado e procura um lugar para se esconder.
         \033[m''')
     escolha = input("\033[;1mDigite uma das alternativas acima: \033[m")
     # Primeira opção
@@ -272,7 +272,7 @@ O que você irá fazer?
         for sound in sounds: 
             sound.play()
         time.sleep(2)
-        frase = f"\nVc se depara com um zumbi, e como não estava preparado ele conseguiu te atingir, vc é contaminado e após 1h morre.\n"
+        frase = f"\nVocê se depara com um zumbi, e como não estava preparado ele conseguiu te atingir, você é contaminado e após 1h morre.\n"
         texto.escreverTexto(frase)
         relogio.avancaTempo(1)
         time.sleep(2)
@@ -304,7 +304,7 @@ O que vc fará agora?
             #Caminho 2->1
             if escolha == "1":
                 os.system('cls')
-                frase = f'{p1.nome} encontrou uma arma para se defender, os zumbis começaram a invadir sua casa após 1hrs de batalha, vc fica cansado e como estava sozinho foi atingido e contaminado e morre após 1hr.'
+                frase = f'{p1.nome} encontrou uma arma para se defender, os zumbis começaram a invadir sua casa após 1hrs de batalha, você fica cansado e como estava sozinho foi atingido e contaminado e morre após 1hr.'
                 p1.infectado = True
                 p1.machucado = True
                 
@@ -328,7 +328,7 @@ O que vc fará agora?
                 p1.infectado = True
                 p1.machucado = True
                 
-                frase = f'{p1.nome} trancou a porta do seu quarto e ficou escondido embaixo da cama. O número de zumbis crescia a cada instantes. Após 2hrs de tentativa eles conseguiram arrombar a porta e vc não teve como se defender, foi contaminado fica muito ferido e após 1hr morre.'
+                frase = f'{p1.nome} trancou a porta do seu quarto e ficou escondido embaixo da cama. O número de zumbis crescia a cada instantes. Após 2hrs de tentativa eles conseguiram arrombar a porta e você não teve como se defender, foi contaminado fica muito ferido e após 1hr morre.'
 
                 pygame.mixer.init() 
                 pygame.mixer.pre_init(44100, -16) 
@@ -376,7 +376,7 @@ O que vc fará agora?
                 while opc == 0:
                     print(f'''\033[;1m{p1.nome} tem duas opções:
 
-1 – Vc irá até elas, para tentar ajudá-las?
+1 – Você irá até elas, para tentar ajudá-las?
 2 – Ignora o pedido de ajuda e continua na sua jornada sozinho?
 \033[m
                     ''')
@@ -392,7 +392,7 @@ O que vc fará agora?
                         for sound in sounds: 
                           sound.play()
 
-                        frase = f'{p1.nome} encontra um grupo de 3 pessoas e se junta a elas em uma batalha contra um grupo de zumbis que não para de crescer, depois de 3hrs de batalha vc e todos os seus amigos são infectados e não resistem a infecção morrendo após 1hr.'
+                        frase = f'{p1.nome} encontra um grupo de 3 pessoas e se junta a elas em uma batalha contra um grupo de zumbis que não para de crescer, depois de 3hrs de batalha você e todos os seus amigos são infectados e não resistem a infecção morrendo após 1hr.'
                         texto.escreverTexto(frase)
                         time.sleep(2)
                         relogio.avancaTempo(4)
@@ -408,7 +408,7 @@ O que vc fará agora?
                     elif escolha == '2':
                         os.system('cls')
 
-                        frase = f"{p1.nome} ignorou os pedidos de ajuda, pq viu que fora do prédio havia um grupo muito grande de zumbis e que vc não teria chance de entrar."
+                        frase = f"{p1.nome} ignorou os pedidos de ajuda, pq viu que fora do prédio havia um grupo muito grande de zumbis e que você não teria chance de entrar."
                         time.sleep(2)
                         texto.escreverTexto(frase, 'verde')
 
@@ -424,7 +424,7 @@ O que vc fará agora?
                         for sound in sounds: 
                             sound.play()
 
-                        frase = f'{p1.nome} continua caminhando após 2hrs um grupo de zumbis te cercam, como vc estava sozinho não consegui resistir é atingido e infectado.'
+                        frase = f'{p1.nome} continua caminhando após 2hrs um grupo de zumbis te cercam, como você estava sozinho não consegui resistir é atingido e infectado.'
                         texto.escreverTexto(frase)
                         print()                        
                         relogio.avancaTempo(2)
@@ -475,7 +475,7 @@ O que vc fará agora?
         p1.infectado = True
         p1.machucado = True
         
-        frase = f'{p1.nome} trancou a porta do seu quarto e ficou escondido embaixo da cama. O número de zumbis crescia a cada instantes. Após 2hrs de tentativa eles conseguiram arrombar a porta e vc não teve como se defender, foi contaminado fica muito ferido e após 1hr morre.'
+        frase = f'{p1.nome} trancou a porta do seu quarto e ficou escondido embaixo da cama. O número de zumbis crescia a cada instantes. Após 2hrs de tentativa eles conseguiram arrombar a porta e você não teve como se defender, foi contaminado fica muito ferido e após 1hr morre.'
 
         sounds = []
         pygame.mixer.music.set_volume(0.5) 
